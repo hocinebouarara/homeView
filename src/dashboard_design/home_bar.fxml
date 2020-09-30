@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard_design.Home_barController">
-    <stylesheets>
-        <URL value="@home_bar.css"/>
-    </stylesheets>
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="200.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard_design.Home_barController">
+   <children>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <ImageView fitHeight="112.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="homeBtn" accessibleText="homeMenu" prefHeight="50.0" prefWidth="202.0" text="HOME">
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </JFXButton>
+      <JFXButton fx:id="SudentsBtn" accessibleText="studentMenu" layoutX="10.0" layoutY="30.0" prefHeight="50.0" prefWidth="203.0" text="STUDENTS">
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </JFXButton>
+      <JFXButton fx:id="NotsBtn" accessibleText="Nots" layoutX="10.0" layoutY="55.0" prefHeight="50.0" prefWidth="204.0" text="NOTS">
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </JFXButton>
+      <JFXButton fx:id="LogOutBtn" layoutX="10.0" layoutY="80.0" onAction="#LogOut" prefHeight="50.0" prefWidth="207.0" text="LogOut">
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </JFXButton>
+   </children>
+</VBox>

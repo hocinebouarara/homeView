@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard_design.HomeController">
-    <stylesheets>
-        <URL value="@home.css"/>
-    </stylesheets>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard_design.HomeController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1200.0" stylesheets="@home.css" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="1200.0">
+         <children>
+            <FontAwesomeIconView fill="#834545" glyphName="MINUS" size="14">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#834545" glyphName="CIRCLE" size="14">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#834545" glyphName="CLOSE" size="16">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="76.0" layoutY="138.0" prefHeight="60.0" prefWidth="1190.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="441.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0" />
+      <AnchorPane fx:id="AnchorPane" layoutX="73.0" layoutY="209.0" prefHeight="425.0" prefWidth="1120.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="209.0" />
+      <HBox layoutX="-130.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXDrawer fx:id="mainBar" prefHeight="627.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </HBox.margin>
+            </JFXDrawer>
+            <VBox>
+               <children>
+                  <JFXHamburger fx:id="hamburger" alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="28.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </JFXHamburger>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>
